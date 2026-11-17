@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is YPAR? | CARE4Youth</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Page-specific styles for ypar.html (uses the colors from styles.css) */
+    .flow { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 14px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); counter-reset: step; }
+    .flow li { position: relative; background: var(--carolina-light); border-top: 4px solid var(--carolina);
+               border-radius: var(--radius); padding: 18px 18px 18px 18px; counter-increment: step; color: var(--navy); }
+    .flow li::before { content: counter(step); display: inline-flex; align-items: center; justify-content: center;
+                       width: 34px; height: 34px; margin-bottom: 8px; border-radius: 50%;
+                       background: var(--navy); color: #fff; font-family: var(--font-heading); font-size: 1rem; }
+    .flow strong { display: block; font-size: 1.1rem; }
+
+    .example { background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+               box-shadow: 0 2px 8px rgba(19, 41, 75, 0.08); overflow: hidden; margin-bottom: 36px; }
+    .example-head { background: var(--navy); color: #fff; padding: 22px 24px; }
+    .example-head h3 { color: #fff; margin: 8px 0 0; }
+    .example-head .tag { margin: 0; }
+    .example-body { padding: 24px; }
+    .example-body p { margin: 0 0 14px; }
+    .example-body h4 { color: var(--navy); margin: 22px 0 8px; font-size: 1.2rem;
+                       border-bottom: 2px solid var(--carolina); display: inline-block; padding-bottom: 4px; }
+    .example-body h4:first-of-type { margin-top: 0; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 0 0 22px; }
+    .stat { background: var(--carolina-light); border-radius: var(--radius); padding: 14px 16px; text-align: center; }
+    .stat b { display: block; font-family: var(--font-heading); font-size: 1.9rem; color: var(--navy); line-height: 1.2; }
+    .stat span { font-size: 0.95rem; color: var(--muted); line-height: 1.3; display: block; }
+
+    .facts { margin: 0 0 14px; padding-left: 22px; }
+    .facts li { margin-bottom: 8px; }
+
+    .two-col { display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr); }
+    @media (min-width: 900px) { .two-col { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+
+    .caveat { background: var(--alt); border-left: 4px solid var(--navy); border-radius: 6px;
+              padding: 12px 16px; margin: 20px 0 0; font-size: 1rem; color: var(--muted); }
+    .caveat strong { color: var(--navy); }
+
+    .benefit { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 28px; }
+    .benefit h2 { color: #fff; border-bottom-color: var(--carolina); }
+    .benefit p { margin: 0; }
+
+    .page-header a { color: #fff; font-weight: bold; }
+    .page-header a:hover { color: var(--navy); }
+
+    .source-list { padding-left: 22px; }
+    .source-list li { margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="https://carolinaacross100.unc.edu/care4youth/" class="brand" target="_blank" rel="noopener noreferrer">CARE4Youth</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <details>
+            <summary class="active">YPAR</summary>
+            <ul class="dropdown-menu">
+              <li><a href="ypar.html" class="active">What is YPAR?</a></li>
+              <li><a href="yparimplement.html">Implementation Guide</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="nav-dropdown">
+          <details>
+            <summary>Participatory Budgeting</summary>
+            <ul class="dropdown-menu">
+              <li><a href="budgeting.html">What is Participatory Budgeting?</a></li>
+              <li><a href="budgetingimplement.html">Implementation Guide</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="nav-dropdown">
+          <details>
+            <summary>Photovoice</summary>
+            <ul class="dropdown-menu">
+              <li><a href="photovoice.html">What is Photovoice?</a></li>
+              <li><a href="photovoiceimplement.html">Implementation Guide</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>What is Youth Participatory Action Research (YPAR)?</h1>
+        <p>Young adults act as co-researchers and change agents: they study an issue affecting them and take action on what they learn. Examples below.</p>
+        <p><a href="yparimplement.html">Implement this in my community.</a></p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="container">
+      <h2>How YPAR Works</h2>
+      <ol class="flow">
+        <li><strong>Choose an issue</strong> Youth pick a local problem that affects them.</li>
+        <li><strong>Collect and analyze data</strong> Youth ask their own questions and look at the evidence.</li>
+        <li><strong>Present findings</strong> Youth share results and solutions with people in power.</li>
+        <li><strong>Take action</strong> Youth help carry out changes in their community.</li>
+      </ol>
+    </section>
+
+    <!-- EXAMPLES -->
+    <section class="alt">
+      <div class="container">
+        <h2>YPAR in Practice</h2>
+
+        <!-- YouthRISE -->
+        <article class="example">
+          <div class="example-head">
+            <span class="tag">Forsyth County, NC</span>
+            <h3>YouthRISE, Winston-Salem State University</h3>
+          </div>
+          <div class="example-body">
+            <div class="stat-row">
+              <div class="stat"><b>10</b><span>week summer program</span></div>
+              <div class="stat"><b>20</b><span>Black youth in grades 8-12 in the pilot</span></div>
+            </div>
+            <div class="two-col">
+              <div>
+                <h4>The program</h4>
+                <p>YouthRISE is a 10-week summer program built on youth participatory action research. Young adults choose a local problem tied to economic mobility, collect and analyze data, and present their findings and proposed solutions to elected officials, business owners, and educators.</p>
+                <p>The county has very low upward mobility for children from lower-income families. The program aims to build well-being, college and career readiness, and a sense of agency as steps toward changing that.</p>
+              </div>
+              <div>
+                <h4>What the pilot found</h4>
+                <p>Youth took surveys before and after the program. Their scores rose for:</p>
+                <ul class="facts">
+                  <li>Life satisfaction</li>
+                  <li>Sense of purpose</li>
+                  <li>Educational aspirations (from about a four-year degree to graduate school)</li>
+                  <li>Belief that individual action can change the community</li>
+                  <li>Desire to contribute to the community</li>
+                </ul>
+                <p>Youth social responsibility did not change significantly.</p>
+              </div>
+            </div>
+            <p class="caveat"><strong>Keep in mind:</strong> The results are promising but preliminary. The sample was small, there was no comparison group, and participants were recruited through referrals.</p>
+          </div>
+        </article>
+
+        <!-- Youth ADAPT NC -->
+        <article class="example">
+          <div class="example-head">
+            <span class="tag">Charlotte, NC</span>
+            <h3>Youth ADAPT NC</h3>
+          </div>
+          <div class="example-body">
+            <div class="stat-row">
+              <div class="stat"><b>13</b><span>of 15 youth finished the project</span></div>
+              <div class="stat"><b>11</b><span>two-hour evening sessions</span></div>
+              <div class="stat"><b>~40</b><span>attendees at the seminar</span></div>
+              <div class="stat"><b>5,000+</b><span>website visitors in 18 months</span></div>
+            </div>
+            <div class="two-col">
+              <div>
+                <h4>The program</h4>
+                <p>Youth ADAPT NC is a participatory action research (PAR) project with Hispanic immigrant youth in Charlotte, an emerging immigrant gateway. Fifteen youth signed up and 13 finished. They met for 11 two-hour evening sessions over about three months at the Latin American Coalition, a local advocacy and social services organization.</p>
+                <p>Their question was how Hispanic youth could improve job access for themselves and their peers. They identified a lack of job-related information as the main barrier: r&eacute;sum&eacute;s, interviews, navigating college, and finding mentors.</p>
+              </div>
+              <div>
+                <h4>What the youth did</h4>
+                <ul class="facts">
+                  <li>Built a website, which drew over 5,000 visitors in its first 18 months.</li>
+                  <li>Ran a professional development seminar at a public library, with about 40 attendees, a panel of local employers and workforce leaders, and food from a local restaurant.</li>
+                </ul>
+                <h4>How participants felt</h4>
+                <p>In the end-of-project survey, nearly all participants said they enjoyed the project, worked well as a team, and felt their voices were heard. Most said they felt better prepared for future jobs.</p>
+              </div>
+            </div>
+            <p class="caveat"><strong>Keep in mind:</strong> This was a small, self-reported evaluation, so it shows the approach is workable and valued.</p>
+          </div>
+        </article>
+
+        <!-- Wildfire smoke -->
+        <article class="example">
+          <div class="example-head">
+            <span class="tag">Colorado</span>
+            <h3>Learning and Living With Wildfire Smoke</h3>
+          </div>
+          <div class="example-body">
+            <div class="stat-row">
+              <div class="stat"><b>3</b><span>Colorado high schools</span></div>
+              <div class="stat"><b>85</b><span>people enrolled</span></div>
+              <div class="stat"><b>2027</b><span>expected primary completion</span></div>
+            </div>
+            <p>This University of Washington study, led by Savannah D&rsquo;Evelyn and funded through the National Institute of Environmental Health Sciences, uses YPAR to reduce air pollution exposure in three Colorado high schools. It began in September 2023 and is active but no longer recruiting.</p>
+
+            <div class="two-col">
+              <div>
+                <h4>Part 1: An air quality curriculum</h4>
+                <p>The curriculum is built into existing science-type classes (Food Science, Intro to Agriculture, and Environmental Science Academy), so every student in those classes takes it. It was designed with the Colorado Department of Public Health and Environment and covers:</p>
+                <ul class="facts">
+                  <li>Air quality basics</li>
+                  <li>Wildfire smoke</li>
+                  <li>Measuring personal exposure</li>
+                  <li>How sensors and monitoring networks work</li>
+                  <li>Civic action</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Part 2: A Student Research Cohort</h4>
+                <p>In each school, 10 to 15 freshmen and sophomores join an after-school cohort. They write their own research questions, such as:</p>
+                <ul class="facts">
+                  <li>How wildfire smoke compares with other pollution sources</li>
+                  <li>How outdoor air gets indoors</li>
+                  <li>How exposure varies across the building and the school day</li>
+                </ul>
+                <p>They receive indoor, outdoor, and handheld monitors and a manual covering placement, calibration, and data analysis. They then arrange and run a meeting to present their plan to school administrators and facilities staff. New students are recruited each year, with returning students bringing them up to speed.</p>
+              </div>
+            </div>
+
+            <h4>What the study measures</h4>
+            <ul class="facts">
+              <li>Knowledge and self-efficacy, before and after the curriculum</li>
+              <li>Behavior change in later years: mask use, time outdoors, transportation, and air filtration</li>
+              <li>Actual indoor particulate and carbon dioxide levels before and after the interventions students design, such as filtration changes or anti-idling campaigns</li>
+            </ul>
+            <p class="caveat"><strong>Keep in mind:</strong> No results have been posted yet, so this is a model still being tested.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="container">
+      <div class="benefit">
+        <h2>How Will This Benefit Youth?</h2>
+        <p>YPAR benefits youth by empowering them to identify and address issues that affect their lives and communities. It provides a platform for youth to develop critical thinking, leadership, and research skills while contributing to meaningful change (e.g., transform systems and issues closely related to youth).</p>
+      </div>
+      <p style="margin-top:24px;"><a href="yparimplement.html">Ready to try it? See the Implementation Guide.</a></p>
+    </section>
+
+    <!-- SOURCES -->
+    <section class="alt">
+      <div class="container">
+        <h2>Sources</h2>
+        <ul class="source-list small">
+          <li><a href="https://www.wssu.edu/academics/colleges-and-departments/college-of-arts-sciences-education/center-for-study-of-economic-mobility/_files/documents/policy-brief-volume-2-issue-5_asof_oct22.pdf">Youth Participatory Action Research as an Intervention to Promote a Pathway for Economic Mobility: Pilot Data from the YouthRISE Summer Program</a></li>
+          <li><a href="https://storage.googleapis.com/jnl-s-j-jces-files/journals/1/articles/205/62e43acdd28a1.pdf">Youth ADAPT NC: A Participatory Action Research Project With Hispanic Youth Aimed at Enhancing Career Opportunities</a></li>
+          <li><a href="https://doaj.org/article/88c97c18964b4ba083d352126ab9a862">DOAJ record for Youth ADAPT NC</a></li>
+          <li><a href="https://clinicaltrials.gov/study/NCT06322966">Learning and Living With Wildfire Smoke - Registered Study</a></li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6692239/">Lindquist-Grantz R, Abraczinskas M. Using Youth Participatory Action Research as a Health Intervention in Community Settings. Health Promot Pract. 2020 Jul;21(4):573-581. doi: 10.1177/1524839918818831. Epub 2018 Dec 21. PMID: 30577698; PMCID: PMC6692239.</a></li>
+        </ul>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; Lucy Damsker</p>
+  </footer>
+
+</body>
+</html>
