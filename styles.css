@@ -267,6 +267,30 @@ h4 { font-size: 1.15rem; margin: 0 0 10px; }
 
 .small { font-size: 1rem; color: var(--muted); }
 
+/* ---------- Figures and images ---------- */
+.figure {
+  margin: 30px 0 22px;
+  text-align: center;
+}
+
+.figure img,
+.center-image {
+  display: block;
+  width: min(100%, 620px);
+  max-width: 620px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(19, 41, 75, 0.08);
+}
+
+.figure figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--navy);
@@ -308,7 +332,7 @@ h4 { font-size: 1.15rem; margin: 0 0 10px; }
   .nav-links > li > a,
   .nav-dropdown summary {
     padding: 8px 12px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .nav-dropdown { position: relative; }

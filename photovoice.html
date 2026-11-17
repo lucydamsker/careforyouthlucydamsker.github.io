@@ -63,8 +63,7 @@
         <div class="card">
           <h4>Where it comes from</h4>
           <p>Caroline Wang and Mary Ann Burris introduced the method in the 1990s in a project with rural women in Yunnan Province, China. The women photographed their daily lives and discussed the photos, then shared them with policy makers to advocate for change.</p>
-          <p>It draws on three roots: feminist theory, documentary photography, and Paulo Freire's idea of education for critical consciousness.</p>
-        </div>
+               </div>
         <div class="card">
           <h4>Who uses it</h4>
           <p>Photovoice began in public health and has since been used with youth, people experiencing homelessness, immigrants and newcomer children, people with disabilities, Indigenous communities, and people living with serious illness. More recently it has also been used in sustainability research.</p>
@@ -279,12 +278,8 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; Lucy Damsker</p>
-  </footer>
 
-</body>
-</html>
+
 
   </main>
 
@@ -292,6 +287,15 @@
     <p>&copy; Lucy Damsker</p>
   </footer>
 
-</body>
+  <script>
+    document.querySelectorAll('a[href]').forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('//')) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+  </script></body>
 </html>
 </html>

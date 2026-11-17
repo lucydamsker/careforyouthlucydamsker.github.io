@@ -46,7 +46,7 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container" id="source-links">
       <ul class="plain-list">
         <li><strong>YPAR</strong></li>
         <li><a href="https://www.wssu.edu/academics/colleges-and-departments/college-of-arts-sciences-education/center-for-study-of-economic-mobility/_files/documents/policy-brief-volume-2-issue-5_asof_oct22.pdf">Youth Participatory Action Research as an Intervention to Promote a Pathway for
@@ -91,5 +91,15 @@ Economic Mobility: Pilot Data from the YouthRISE Summer Program</a></li>
     <p>&copy; Lucy Damsker</p>
   </footer>
 
+  <script>
+    document.querySelectorAll('a[href]').forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('//')) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+  </script>
 </body>
 </html>

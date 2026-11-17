@@ -112,7 +112,16 @@
    
 
   </main>
-</body>
+  <script>
+    document.querySelectorAll('a[href]').forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('//')) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+  </script></body>
 
  <footer class="site-footer">
     <p>&copy; Lucy Damsker</p>
